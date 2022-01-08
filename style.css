@@ -1,0 +1,27 @@
+.abs-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 50vh;
+  }
+  
+  body{
+      background: rgb(226, 226, 226);
+  }
+
+  .form {
+    width: 1200px;
+  }
+
+ .dropdown-toggle{
+     background-color: white;
+ }
+
+ .card-header {
+     background-color: rgb(126, 126, 248);
+     font-weight: bold;
+ }
+
+ .card-footer{
+     background-color: rgb(218, 216, 216);
+ }
