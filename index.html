@@ -15,61 +15,75 @@
 <body>
     <div class="container">
         <div class="abs-center">
-            <form action="#" class="border bg-light form text">
+            <form action="#" class="border bg-light form text" id="form">
                 <div class="card-header border-dark">Payment form</div>
                 <div class="card-body">
                     <div class="row">
                         <div class="col-4">
                             <label class="form-label">Card #</label>
-                            <input type="text" class="form-control" id="card" placeholder="Card Number">
+                            <div id="error-card"></div>
+                            <input type="text" class="form-control" id="card" placeholder="Card Number" name="card">
                         </div>
                         <div class="col-4">
                             <label>CVC #</label>
-                            <input type="text" class="form-control" id="cvc" placeholder="XXX">
+                            <div id="error-cvc"></div>
+                            <input type="text" class="form-control" id="cvc" placeholder="XXX" name="cvc">
                         </div>
                         <div class="col-4">
                             <label>Amount</label>
+                            <div id="error-amount"></div>
                             <div class="input-group mb-3">
                                 <label class="input-group-text">$ </label>
-                                <input type="text" class="form-control" id="amount" aria-label="Amount (to the nearest dollar)">
+                                <input type="text" class="form-control" id="amount" aria-label="Amount (to the nearest dollar)" name="amount">
                             </div>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-6">
                             <label>First Name</label>
-                            <input type="text" class="form-control" id="firstName">
+                            <div id="error-first-name"></div>
+                            <input type="text" class="form-control" id="firstName" name="firstName">
                         </div>
                         <div class="col-6">
                             <label>Last Name</label>
-                            <input type="text" class="form-control" id="lastName">
+                            <div id="error-last-name"></div>
+                            <input type="text" class="form-control" id="lastName" name="lastName">
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-6">
                             <label>City</label>
-                            <input type="text" class="form-control" id="city">
+                            <div id="error-city"></div>
+                            <input type="text" class="form-control" id="city" name="city">
                         </div>
                         <div class="col-3">
                             <label>State</label>
+                            <div id="error-state"></div>
                             <div class="dropdown me-1">
-                                <button type="button" class="btn border dropdown-toggle" id="state" data-bs-toggle="dropdown" aria-expanded="false" data-bs-offset="10,20">
-                                  Pick a State
-                                </button>
+                                <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Pick a State" name="state">
+                                <datalist id="datalistOptions">
+                                    <option value="San Francisco">
+                                    <option value="New York">
+                                    <option value="Seattle">
+                                    <option value="Los Angeles">
+                                    <option value="Chicago">
+                                </datalist>
                             </div>
                         </div>
                         <div class="col-3">
                             <label>Postal Code</label>
-                            <input type="text" class="form-control" id="postalCode">
+                            <div id="error-postal-code"></div>
+                            <input type="text" class="form-control" id="postalCode" name="postalCode">
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-6">
                             <label>We Accept:</label>
+                            <div id="error-check"></div>
                             <div class="row">
                                 <div class="col-auto">
                                     <div class="form-check">
-                                        <input class="form-check-input" id="mastercard" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                        <input class="form-check-input" id="mastercard" type="radio" name="radioMastercad" id="flexRadioDefault1">
                                         <label class="form-check-label" for="flexRadioDefault1">
                                             <i class="fab fa-cc-mastercard"></i>
                                         </label>
@@ -77,7 +91,7 @@
                                 </div>
                                 <div class="col-auto">
                                     <div class="form-check">
-                                        <input class="form-check-input" id="visa" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                        <input class="form-check-input" id="visa" type="radio" name="radioVisa" id="flexRadioDefault1">
                                         <label class="form-check-label" for="flexRadioDefault1">
                                             <i class="fab fa-cc-visa"></i>
                                         </label>
@@ -85,7 +99,7 @@
                                 </div>
                                 <div class="col-auto">
                                     <div class="form-check">
-                                        <input class="form-check-input" id="diners" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                        <input class="form-check-input" id="diners" type="radio" name="radioDiners" id="flexRadioDefault1">
                                         <label class="form-check-label" for="flexRadioDefault1">
                                             <i class="fab fa-cc-diners-club"></i>
                                         </label>
@@ -93,7 +107,7 @@
                                 </div>
                                 <div class="col-auto">
                                     <div class="form-check">
-                                        <input class="form-check-input" id="american" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                        <input class="form-check-input" id="american" type="radio" name="radioAmerican" id="flexRadioDefault1">
                                         <label class="form-check-label" for="flexRadioDefault1">
                                             <i class="fab fa-cc-amex"></i>
                                         </label>
@@ -104,7 +118,7 @@
                         <div class="col-6">
                             <div class="form-group green-border-focus">
                                 <label for="exampleFormControlTextarea5">Message</label>
-                                <textarea class="form-control" id="exampleFormControlTextarea5" rows="3"></textarea>
+                                <textarea class="form-control" id="exampleFormControlTextarea5" rows="3" name="message"></textarea>
                                 <p style="color: gray; font-size: small;">Add any notes here</p>
                             </div>
                         </div>

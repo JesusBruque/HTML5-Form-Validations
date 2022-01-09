@@ -25,3 +25,10 @@
  .card-footer{
      background-color: rgb(218, 216, 216);
  }
+
+ .alert{
+    height: 30px;
+    text-align: center;
+    padding-top: 2px;
+    overflow: hidden;
+ }
