@@ -7,17 +7,23 @@ const data = {
     city:"",
     state:"",
     postalCode:"",
+    radioVisa:"false",
+    radioMastercard:"false",
+    radioDiners:"false",
+    radioAmerican:"false",
     message:""
 };
 
 window.onload = function () {
     const form = document.querySelector("#form");
+    
 
     const errorFormat = `<div class="alert alert-danger" role="alert">
                         Enter the data correctly
                         </div>`;
 
     const validateForm = () => {
+        
         if (data.card.length !== 16){
             const errorCard = document.querySelector("#error-card");
             errorCard.innerHTML = errorFormat;
@@ -58,7 +64,7 @@ window.onload = function () {
             errorPostalCode.innerHTML = errorFormat;
         }
 
-        if (data.mastercard == ""){
+        if (data.radioMastercard == "false" && data.radioVisa == "false" && data.radioDiners == "false" && data.radioAmerican == "false"){
             const errorCheck = document.querySelector("#error-check");
             errorCheck.innerHTML = errorFormat;
         }
